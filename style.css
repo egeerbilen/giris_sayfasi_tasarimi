@@ -1,0 +1,697 @@
+.flas {
+    background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, rgb(38, 109, 175), transparent, transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 47px;
+    font-family: "Source Sans Pro", sans-serif;
+    -webkit-animation: reveal 2700ms ease-in-out forwards 200ms, glow 5500ms linear infinite 2000ms;
+    animation: reveal 2700ms ease-in-out forwards 200ms, glow 5500ms linear infinite 2000ms;
+}
+
+@-webkit-keyframes reveal {
+    80% {
+        letter-spacing: 0px;
+    }
+
+    100% {
+        background-size: 300% 300%;
+    }
+}
+
+@keyframes reveal {
+    80% {
+        letter-spacing: 0px;
+    }
+
+    100% {
+        background-size: 300% 300%;
+    }
+}
+
+@-webkit-keyframes glow {
+    40% {
+        text-shadow: 0 0 0px rgb(19, 187, 253);
+    }
+}
+
+@keyframes glow {
+    40% {
+        text-shadow: 0 0 0px rgb(19, 187, 253);
+    }
+}
+
+
+
+
+html {
+    width: 100%;
+    height: 1500px;
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+    /*sayfa soldan saga icerik alsin*/
+    overflow-x: hidden;
+    /*sayfamiz asla yatay cubuk cikmain diye yazdik*/
+    overflow-y: scroll;
+    /* dikey kaydirma cubugu hep olsun*/
+    background-color: rgb(0, 39, 112);
+    background-image: linear-gradient(-180deg, rgb(0, 39, 112), rgb(8, 102, 146));
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    /*border ve outline bilerek none yaptik cünkü tutarsiz tarayicilarda görüntünün bozulmasini istemiyoruz */
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #646464;
+    line-height: 1.5;
+    /*Satir yüksekligi*/
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    /* yazi kalinligini belirledik bazi cihazlarda farkli otomatik deger alabiliyor o olmasin diye yaptik*/
+    /* sayfadaki herseyi ortalamak icin yaptik*/
+    text-decoration: none;
+    /*Sayfada alt üssleme cizgisi olmasin diye yaptik*/
+    background-repeat: no-repeat;
+}
+
+/* >>>>>>>> Ekran boyutuna göre yazi büyüklügünü ayarladik <<<<<<< */
+
+/* font boyutlari genelde responsive yapida olur */
+@media only screen and (min-width:1200px) {
+    /*XL ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    body {
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    /*L ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    body {
+        font-size: 13px;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    /*M ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    body {
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) {
+    /*S ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    body {
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width:575px) {
+    /*XS ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    body {
+        font-size: 12px;
+    }
+
+}
+
+#bosluk {
+    padding-top: 75px;
+}
+
+#login_alanı {
+    margin: auto;
+    width: auto;
+    height: 490px;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    outline: hidden;
+    overflow: hidden;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(26, 26, 26);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    opacity: 0.85;
+}
+
+
+@media only screen and (min-width:1200px) {
+    /*XL ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    #login_alanı {
+        width: 740px;
+        min-width: 740px;
+        max-width: 740px;
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    /*L ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    #login_alanı {
+        width: 740px;
+        min-width: 740px;
+        max-width: 740px;
+        font-size: 13px;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+    /*M ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    #login_alanı {
+        width: 740px;
+        min-width: 740px;
+        max-width: 740px;
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) {
+    /*S ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    #login_alanı {
+        width: 500px;
+        min-width: 500px;
+        max-width: 500px;
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width:575px) {
+    /*XS ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    #login_alanı {
+        width: 295px;
+        min-width: 295px;
+        font-size: 12px;
+    }
+
+}
+
+#giris_alani {
+    height: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-left: 150px;
+    padding: 0;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(55, 120, 194);
+    background-color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    animation-duration: 0.40s;
+}
+
+#giris_yazi_alani {
+    margin: 0px 25px;
+    cursor: pointer;
+}
+
+#kaydol_alani {
+    height: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-left: 140px;
+    padding: 0;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(55, 120, 194);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    animation-duration: 0.40s;
+}
+
+
+@media only screen and (min-width:576px) and (max-width:767px) {
+    #kaydol_alani {
+        margin-left: 80px;
+    }
+
+    #giris_alani {
+        margin-left: 80px;
+    }
+
+
+}
+
+@media only screen and (max-width:575px) {
+    #kaydol_alani {
+        margin-left: 0px;
+    }
+
+    #giris_alani {
+        margin-left: 20px;
+    }
+
+
+}
+
+@keyframes renk_degis {
+    from {
+        background-color: rgb(117, 179, 238);
+    }
+
+    to {
+        background-color: rgb(241, 241, 241);
+    }
+}
+
+@keyframes renk_degis_sifirla {}
+
+#kaydol_yazi_alani {
+    margin: 0px 25px;
+    cursor: pointer;
+}
+
+#animasyon_alani {
+    height: auto;
+    width: auto;
+    animation-duration: 2s;
+}
+
+#form_kaydol_bilgiler_alani {
+    height: auto;
+    width: auto;
+    animation-duration: 2s;
+}
+
+@keyframes animasyon_alani_degerleri {
+    from {
+        margin-top: 100px;
+    }
+
+    to {
+        margin-top: 0px;
+    }
+}
+
+@keyframes animasyon_alani_sifirla {}
+
+#input_kullanici_alani {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 0;
+}
+
+
+#input_kullanici_sifre_alani {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 0;
+}
+
+#input_kaydol_kullanici_adi_alani {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 0;
+}
+
+#input_kaydol_kullanici_alani {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 0;
+}
+
+#input_kaydol_kullanici_yas_alani {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 0;
+}
+
+#input_kaydol_kullanici_cinsiyet_alani {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 0;
+}
+
+#input_kaydol_kullanici_sifre_alani {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 0;
+}
+
+#input_kaydol_kullanici_sifre_tekrar_alani {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-left: 40px;
+    padding: 0;
+}
+
+#kaydol_buton_alani {
+    margin-bottom: 50px;
+}
+
+.input_bilgi_yeri {
+    color: #22abeb;
+    font-size: large;
+    font-style: normal;
+    outline: none;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.input_yeri {
+    height: 35px;
+    min-height: 35px;
+    max-height: 35px;
+    width: calc(100% - 90px);
+    min-width: calc(100% - 90px);
+    max-width: calc(100% - 90px);
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    outline: none;
+    color: rgb(19, 66, 153);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #ebebeb;
+}
+.input_yeri::placeholder {
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 15px;
+    color: rgb(19, 66, 153);
+    opacity: 1;
+}
+
+.input_yeri:focus {
+    border: 2px solid rgb(10, 204, 10);
+    background-color: white;
+}
+
+@media only screen and (max-width:767px) {
+    /*S ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    .input_yeri {
+        width: calc(100% - 60px);
+        min-width: calc(100% - 60px);
+        max-width: calc(100% - 60px);
+    }
+
+}
+
+.input_cinsiyet {
+    height: 35px;
+    min-height: 35px;
+    max-height: 35px;
+    width: calc(100% - 80px);
+    min-width: calc(100% - 80px);
+    max-width: calc(100% - 80px);
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 15px;
+    outline: none;
+    color: rgb(19, 66, 153);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #ebebeb;
+}
+
+.input_cinsiyet::placeholder {
+    font-weight: 600;
+    font-size: 15px;
+    margin-left: 15px;
+    color: rgb(19, 66, 153);
+    opacity: 1;
+}
+
+.input_cinsiyet:focus {
+    border: 2px solid rgb(10, 204, 10);
+    background-color: white;
+}
+
+@media only screen and (max-width:767px) {
+    /*S ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    .input_cinsiyet {
+        width: calc(100% - 50px);
+        min-width: calc(100% - 50px);
+        max-width: calc(100% - 50px);
+    }
+
+}
+
+
+
+#giris_butonu {
+    height: 45px;
+    min-height: 45px;
+    max-height: 45px;
+    width: calc(100% - 120px);
+    min-width: calc(100% - 120px);
+    max-width: calc(100% - 120px);
+    margin-top: 30px;
+    margin-left: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    outline: none;
+    background-color: #22abeb;
+    border: 1px solid #22abeb;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    color: rgb(44, 39, 39);
+}
+
+@media only screen and (max-width:767px) {
+    /*S ekranlar icin*/
+
+    /*sadece screen nesnesinde olacak*/
+
+    #giris_butonu {
+        width: calc(100% - 90px);
+        min-width: calc(100% - 90px);
+        max-width: calc(100% - 90px);
+    }
+
+}
+
+#giris_butonu:active {
+    background-color: rgb(0, 116, 194);
+}
+
+#login_alt_alani {
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.sifre_unuttum {
+    float: right;
+    margin-right: 75px;
+    text-decoration: none;
+    color: rgb(14, 169, 230);
+}
+
+.sifre_unuttum:hover {
+    float: right;
+    margin-right: 75px;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width:575px) {
+    /*XS ekranlar icin*/
+
+    .sifre_unuttum {
+        float: right;
+        margin-right: 15px;
+        margin-top: 4px;
+    }
+
+}
+
+#beni_hatirla_btn {
+    color: #22abeb;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+@media only screen and (min-width:1200px) {
+
+    #header_mesaj_alani {
+        height: 40px;
+        min-height: 40px;
+        max-height: 40px;
+    }
+
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+
+    #header_mesaj_alani {
+        height: 40px;
+        min-height: 40px;
+        max-height: 40px;
+    }
+
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+
+    #header_mesaj_alani {
+        height: 30px;
+        min-height: 30px;
+        max-height: 30px;
+    }
+
+}
+
+@media only screen and (min-width:576px) and (max-width:767px) {
+
+    #header_mesaj_alani {
+        height: 30px;
+        min-height: 30px;
+        max-height: 30px;
+    }
+
+}
+
+@media only screen and (max-width:575px) {
+
+    #header_mesaj_alani {
+        height: 25px;
+        min-height: 25px;
+        max-height: 25px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+width: -webkit-calc(100% - 10px);
+width: -moz-calc(100% - 10px);
+width: -o-calc(100% - 10px);
+width: -ms-calc(100% - 10px);
+min-width: calc(100% - 10px);
+min-width: -webkit-calc(100% - 10px);
+min-width: -moz-calc(100% - 10px);
+min-width: -o-calc(100% - 10px);
+min-width: -ms-calc(100% - 10px);
+max-width: calc(100% - 10px);
+max-width: -webkit-calc(100% - 10px);
+max-width: -moz-calc(100% - 10px);
+max-width: -o-calc(100% - 10px);
+max-width: -ms-calc(100% - 10px);
+max-width: calc(100% - 10px);
+
+
+*/
